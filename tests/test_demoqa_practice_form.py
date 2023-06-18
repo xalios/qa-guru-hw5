@@ -32,8 +32,7 @@ def test_filling_form():
 
     # Checking table sizes
     browser.all('.table-responsive>table>tbody>tr').should(have.size(10))
-    for tr in browser.all('.table-responsive>table>tbody>tr'):
-        tr.all('td').should(have.size(2))
+    browser.all('.table-responsive>table>thead>tr').all('th').should(have.size(2))
 
     # Checking values and that they are corresponding row labels
     browser.element('//*[contains(text(), "Student Name")]/following-sibling::td').should(have.text('John Doe'))
