@@ -15,8 +15,8 @@ def test_filling_form():
     browser.element('[value="5"]').click()
     browser.element('.react-datepicker__day--031').click()
     browser.element('#subjectsInput').type('Computer science').press_enter()
-    browser.element('//label[contains(text(), "Sports")]').click()
-    browser.element('//label[contains(text(), "Music")]').click()
+    browser.element('//label[contains(text(), "Sports")]/..').click()
+    browser.element('//label[contains(text(), "Music")]/..').click()
 
     # os library usage is prohibited by the task requirement: "Библиотеки, разрешенные к использованию: pytest, selene."
     browser.element("#uploadPicture").send_keys('C:/Users/Azz/PycharmProjects/qa-guru-hw5/img/avatar.jpg')
@@ -28,6 +28,7 @@ def test_filling_form():
     browser.element('//*[contains(text(), "Noida")]').click()
     browser.element('#submit').click()
 
+    # TESTS
     browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
 
     # Checking table sizes
