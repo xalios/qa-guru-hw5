@@ -35,7 +35,6 @@ def test_filling_form():
 
     # Checking values and that they are corresponding row labels
     browser.all('.table-responsive tr').element_by(have.text('Student Name')).should(have.text('John Doe'))
-    browser.all('.table-responsive tr').element_by(have.text('Student Name')).should(have.text('John Doe'))
     browser.all('.table-responsive tr').element_by(have.text('Student Email')).should(have.text('jdoe@test.com'))
     browser.all('.table-responsive tr').element_by(have.text('Gender')).should(have.text('Male'))
     browser.all('.table-responsive tr').element_by(have.text('Mobile')).should(have.text('9123456789'))
